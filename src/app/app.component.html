@@ -5,12 +5,12 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Тип</th>
-        <th>Модель</th>
-        <th>Код производителя</th>
-        <th>Операционная система</th>
-        <th>Игровой ноутбук</th>
-        <th>Год релиза</th>
+        <th i18n>Type</th>
+        <th i18n>Model</th>
+        <th i18n>Manufacturer code</th>
+        <th i18n>Operation system</th>
+        <th i18n>Gaming laptop</th>
+        <th i18n>Release year</th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +19,7 @@
         <td>{{ item.model }}</td>
         <td>{{ item.manufacturerCode }}</td>
         <td>{{ item.os }}</td>
-        <td>{{ item.gaming ? 'Да' : 'Нет' }}</td>
+        <td>{{ item.gaming | yesNo }}</td>
         <td>{{ item.releaseYear | date: 'y' }}</td>
       </tr>
     </tbody>

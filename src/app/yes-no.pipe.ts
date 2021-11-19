@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class YesNoPipe implements PipeTransform {
 
   transform(value: unknown, ...args: unknown[]): unknown {
-    return value ? "Yes" : "No";
+    return value ? $localize`Yes` : $localize`No`;
   }
 
 }
