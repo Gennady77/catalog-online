@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "catalog-online": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ru": "src/locales/messages.ru.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -36,6 +42,9 @@
             "scripts": []
           },
           "configurations": {
+            "ru": {
+              "localize": ["ru"]
+            },
             "production": {
               "budgets": [
                 {
@@ -71,6 +80,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "ru": {
+              "browserTarget": "catalog-online:build:ru"
+            },
             "production": {
               "browserTarget": "catalog-online:build:production"
             },
